@@ -29,6 +29,8 @@ Clearly, methods which are coherent with assumtpion 1 will not be well suited wi
 ![](readme_images/peak_right.png) | ![](readme_images/peak_right_align.png)
 ![](readme_images/peak_left.png) | ![](readme_images/peak_left_align.png)
 
+# Methods:
+
 ## :one: Voronoi - FPCA (with aligned signals)
 
 ![](readme_images/b_step.PNG)

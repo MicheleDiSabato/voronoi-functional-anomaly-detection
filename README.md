@@ -43,6 +43,10 @@ Based on [this](https://www.sciencedirect.com/science/article/pii/S0303243412000
 ![](readme_images/a_step.PNG)
 
 ## :two: Voronoi - dimesionality reduction algorithm (with original signals)
+Additions with repect to :one::
+1. don't work directly on signals, but on some statistics of the dataset based on our [Exploratory Data Analysis](# Exploratory-data-analysis);
+2. less robust (with :one: we are saying that, for example, if the representative of 100 signals in a specific patch is clustered as anomaly, all those 100 points will be classifed as anomalies as well);
+3. don't use FPCA and k-means (which might be a bottleneck);
 
 ![](readme_images/mdr.PNG)
 

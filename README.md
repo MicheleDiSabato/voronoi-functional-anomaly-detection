@@ -60,7 +60,9 @@ The dataset used to train the dictionary needs to be composed of only normal poi
 ![](readme_images/dl.PNG)
 
 ## :four: Voronoi - weighted H<sup>1</sup> distance (with aligned signals)
-The weighted $H^1$ norm is: 
+The underlying idea for this algorithm was taken from graph teory, in particular regarding the centrality measure.
+
+The weighted $H^1$ norm used in the algorithm is: 
 $$dist(f_1, f_2) = \|\|f_1 - f_2\|\|^2_{L^2} + \theta \|\|\partial_t f_1 - \partial_t f_2\|\|^2_{L^2}$$
 
 ![](readme_images/H1.PNG)

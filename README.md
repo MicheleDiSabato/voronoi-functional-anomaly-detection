@@ -20,7 +20,9 @@ We don't know the reason behind a point being an anomaly, hence we followed two 
 Clearly, methods which are coherent with assumtpion 1 will not be well suited with assumtpion 2.
 
 # Voronoi tessellation:
-**Def:** a [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) is a collection of non overlapping patches which describe the geometry of the heart. We select **n** nuclei (i.e. randomly sampled points), the remaining points are assigned to the closest nucleus in a process which resembles the assigning of a point to one of the centroids in the k-means algorithm. 
+We used [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) as a way of taking into account spatial correlation among signals.
+
+**Def:** a Voronoi tessellation is a collection of non overlapping patches which describe the geometry of the heart. We select **n** nuclei (i.e. randomly sampled points), the remaining points are assigned to the closest nucleus in a process which resembles the assigning of a point to one of the centroids in the k-means algorithm. 
 
 **Remark on shifting:** whenever the temporal difference among signals odes not need to be taken into account, we used the algined signals (see [`alignment.py`](alignment.py)). For example:
 

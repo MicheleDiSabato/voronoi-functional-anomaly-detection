@@ -65,6 +65,8 @@ The underlying idea for this algorithm was taken from graph teory, in particular
 The weighted $H^1$ norm used in the algorithm is: 
 $$dist(f_1, f_2) = \|\|f_1 - f_2\|\|^2_{L^2} + \theta \|\|\partial_t f_1 - \partial_t f_2\|\|^2_{L^2}$$
 
+Note that now the nuclei coincide with the representatives.
+
 ![](readme_images/H1.PNG)
 
 

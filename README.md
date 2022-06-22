@@ -45,7 +45,7 @@ Based on [this](https://www.sciencedirect.com/science/article/pii/S0303243412000
 ![](readme_images/mdr.PNG)
 
 ## :three: Voronoi - dictionary learning algorithm (with original signals)
-Based on [this]([https://www.sciencedirect.com/science/article/pii/S0303243412000505](https://boracchi.faculty.polimi.it/docs/2016_04_MultiscaleAnomalyDetection_ICIP.pdf)) paper.
+Based on [this](https://ieeexplore.ieee.org/document/7790862) paper.
 
 ![](readme_images/dl.PNG)
 

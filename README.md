@@ -24,6 +24,8 @@ We used [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) as
 
 **Def:** a Voronoi tessellation is a collection of non overlapping patches which describe the geometry of the heart. We select **n** nuclei (i.e. randomly sampled points), the remaining points are assigned to the closest nucleus in a process which resembles the assigning of a point to one of the centroids in the k-means algorithm. 
 
+Since the choice of the **n** nuclei is random, whenever a Voronoi tessellation is involved we need to proceed in a bootstrap-like manner. 
+
 **Remark on shifting:** whenever the temporal difference among signals odes not need to be taken into account, we used the algined signals (see [`alignment.py`](alignment.py)). For example:
 
 | original signal | aligned signal

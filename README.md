@@ -12,12 +12,12 @@
 # Exploratory data analysis:
 
 # Assumptions:
-We don't know the reason behind a point being an anomaly, hence we followed two trains of thought:
+We don't know what makes a point an anomaly, hence we followed two trains of thought:
 
 1. Anomalies are grouped together (e.g. anomalies are due to measurament errors).
-2. Anomaleis are isolated points (e.g. anomalies are due to  the presence of scar tissue).
+2. Anomalis are isolated points (e.g. anomalies are due to  the presence of scar tissue).
 
-Clearly, methods which are coherent with assumtpion 1 will not be well suited with assumtpion 2.
+Clearly, methods which are coherent with assumtpion 1 will not be well suited with assumtpion 2. For esample, an algoithm which is methodologically similar to k-NN will of course be coherent with assumption 2: if anomalies were grouped together, then it would be impossible to classify a signal as such, just by looking at its neighbors (which will be almost surely anomalies).
 
 # Voronoi tessellation:
 We used [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) as a way of taking into account spatial correlation among signals.
@@ -34,6 +34,7 @@ We used [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) as
 # Methods:
 
 ## :one: Voronoi - FPCA (with aligned signals)
+Based on [this](https://www.sciencedirect.com/science/article/pii/S0303243412000505) paper.
 
 ![](readme_images/b_step.PNG)
 
@@ -44,6 +45,7 @@ We used [Voronoi tessellation](https://en.wikipedia.org/wiki/Voronoi_diagram) as
 ![](readme_images/mdr.PNG)
 
 ## :three: Voronoi - dictionary learning algorithm (with original signals)
+Based on [this]([https://www.sciencedirect.com/science/article/pii/S0303243412000505](https://boracchi.faculty.polimi.it/docs/2016_04_MultiscaleAnomalyDetection_ICIP.pdf)) paper.
 
 ![](readme_images/dl.PNG)
 

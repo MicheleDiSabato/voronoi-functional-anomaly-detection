@@ -51,7 +51,11 @@ Additions with repect to :one::
 ![](readme_images/mdr.PNG)
 
 ## :three: Voronoi - dictionary learning algorithm (with original signals)
-Based on [this](https://ieeexplore.ieee.org/document/7790862) paper. This algorithm has been designed for anomaly detection in *images*, but can be straightforwardly generalized to vectors, thanks to the fact that one step of the algorithm is to unroll some pathces of the image, thus obtaining vectors. **In our case, a vector is not obtained unrolling an image, but it componsed of the values of a signal in different time stamps.** 
+Based on [this](https://ieeexplore.ieee.org/document/7790862) paper. This algorithm has been designed for anomaly detection in *images*, but can be straightforwardly generalized to vectors, thanks to the fact that one step of the algorithm is to unroll some pathces of the image, thus obtaining vectors. **In our case, a vector is not obtained unrolling an image, but it componsed of the values of a signal in different time stamps: i.e. the i-th component of the vector is the evaluation of a specific signal in the i-th time stamp.** 
+
+The dataset used to train the dictionary needs to be composed of only normal points: hence this algorithm works under the assumption of isolated anomalies. Indeed, a point is an anomaly if:
+1. the coeficients which represent its "projection" onto the dictionary are not as sparse as the ones of the training set (which is composed by normal points only);
+2. the dictionary representation of that point using the learned dictionary and weights is far away (in terms of L2 distance) from the true value of the point;
 
 ![](readme_images/dl.PNG)
 

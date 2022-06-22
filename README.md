@@ -45,13 +45,13 @@ Based on [this](https://www.sciencedirect.com/science/article/pii/S0303243412000
 ## :two: Voronoi - dimesionality reduction algorithm (with original signals)
 Additions with repect to :one::
 1. don't work directly on signals, but on some statistics of the dataset based on our [Exploratory Data Analysis](README.md#exploratory-data-analysis);
-2. less robust (with :one: we are saying that, for example, if the representative of 100 signals in a specific patch is clustered as anomaly, all those 100 points will be classifed as anomalies as well);
+2. less robust, hence more specific (with :one: we are saying that, for example, if the representative of 100 signals in a specific patch is clustered as anomaly, all those 100 points will be classifed as anomalies as well);
 3. don't use FPCA and k-means (which might be a bottleneck);
 
 ![](readme_images/mdr.PNG)
 
 ## :three: Voronoi - dictionary learning algorithm (with original signals)
-Based on [this](https://ieeexplore.ieee.org/document/7790862) paper.
+Based on [this](https://ieeexplore.ieee.org/document/7790862) paper. This algorithm has been designed for anomaly detection in *images*, but can be straightforwardly generalized to vectors, thanks to the fact that one step of the algorithm is to unroll some pathces of the image, thus obtaining vectors. **In our case, a vector is not obtained unrolling an image, but it componsed of the values of a signal in different time stamps.** 
 
 ![](readme_images/dl.PNG)
 

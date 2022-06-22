@@ -29,21 +29,25 @@ Clearly, methods which are coherent with assumtpion 1 will not be well suited wi
 ![](readme_images/peak_right.png) | ![](readme_images/peak_right_align.png)
 ![](readme_images/peak_left.png) | ![](readme_images/peak_left_align.png)
 
-## Voronoi - FPCA
+## Voronoi - FPCA (with aligned signals)
 
+![](readme_images/b_step.PNG)
 
+![](readme_images/a_step.PNG)
 
-## Voronoi - dimesionality reduction algorithm
+## Voronoi - dimesionality reduction algorithm (with original signals)
 
+![](readme_images/mdr.PNG)
 
+## Voronoi - dictionary learning algorithm (with original signals)
 
-## Voronoi - dictionary learning algorithm
+![](readme_images/dl.PNG)
 
+## Voronoi - weighted H<sup>1</sup> distance (with aligned signals)
+The weighted $H^1$ norm is: 
+$$dist(f_1, f_2) = \|\|f_1 - f_2\|\|^2_{L^2} + \theta \|\|\partial_t f_1 - \partial_t f_2\|\|^2_{L^2}$$
 
-
-## Voronoi - weighted $H^1$ distance
-
-
+![](readme_images/H1.PNG)
 
 
 

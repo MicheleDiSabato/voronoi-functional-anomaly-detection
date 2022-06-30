@@ -116,7 +116,7 @@ The dataset used to train the dictionary needs to be composed of only normal poi
 </p>
 
 ## :four: Voronoi - weighted H<sup>1</sup> distance (with aligned signals)
-The underlying idea for this algorithm was taken from graph teory, in particular regarding the centrality measure.
+The underlying idea for this algorithm was taken from graph theory, in particular regarding centrality measures.
 
 The weighted $H^1$ norm used in the algorithm is: 
 $$dist(f_1, f_2) = \|\|f_1 - f_2\|\|^2_{L^2} + \theta \|\|\partial_t f_1 - \partial_t f_2\|\|^2_{L^2}$$
@@ -127,7 +127,7 @@ Note that now the nuclei coincide with the representatives.
   <img src=readme_images/H1.PNG>
 </p>
 
-# Conclusions :
+# Conclusions:
 
 
 

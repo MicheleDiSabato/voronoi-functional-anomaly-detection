@@ -39,7 +39,7 @@ In general, we can observe that[^1]:
 * Normal signals tend to have a higher kurtosis and so more prominent peaks with small values around them, instead the abnormal ones tend to have lower kurtosis and so lower peaks (according to small variance) (Figure 7);
 * The skewness suggests that abnormal signals always have a mean amplitude value larger than their median amplitude value, while it’s not true for normal signals (Figure 8). From these plots, we are able to identify the features most related to the anomalous signals, indeed they seem to be closer to flat signals with small amplitude peaks and small variance.
 
-[^1]: by "normal" and "abnormal" we refer to signals having an IIR less or greater than 1.22, respectively.
+[^1]: By "normal" and "abnormal" we refer to signals having an IIR less or greater than 1.22, respectively. It is important to stress that **we do not have the labels for the signals in our dataset**, this is an unsupervised task.
 
 These considerations were the results of the following exploratory data analysis:
 
@@ -54,6 +54,10 @@ These considerations were the results of the following exploratory data analysis
 | Displcement among argmax and argmin of the curves | Variance
 :---:|:---:
 ![displacement](readme_images/pos.png) | ![var](readme_images/var.png)
+
+**These plots reveal the importance of the IIR index, which scientific literature confirms as being an indicator for fibrosis. For this reason, throughout our project we judged the goodness of our models based on the number of signals which have an IIR fgreater than 1.22, but which are classified as anomalies. We want to keep this number as low as possible, since signals with IIR greater than 1.22 *might* be anomalies.**
+
+Moreover, as previously explained, these plots are able to give us a representation of what an anomaly may look like.
 
 # Assumptions:
 We don't know what makes a point an anomaly, hence we followed two trains of thought:

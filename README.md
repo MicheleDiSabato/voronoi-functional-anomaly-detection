@@ -6,6 +6,14 @@
 # voronoi-functional-anomaly-detection
 
 # Theoretical framework:
+Our project takes into consideration a particular dataset composed of a very large number of spatial points
+belonging to the left atrium (LA) of the heart.
+
+![sample](readme_images/LA.png)
+
+The main activity of the heart is the mechanical contraction and expansion, these have their origin in the electrical activation of the cardiac cells. Indeed, at each heartbeat, myocytes are activated and deactivated following a characteristic electrical cycle. If a cell doesn’t work in the right way could cause some cardiac problems, such as arrhythmias.
+
+To check the health of the heart of a patient, many studies have been conducted on the propagation of the impulse of the potential through the heart and the propagation of this signal in space and time is recorded.
 
 ![sample](readme_images/sample.png)
 

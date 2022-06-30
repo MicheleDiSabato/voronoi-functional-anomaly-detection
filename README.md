@@ -82,9 +82,13 @@ Since the choice of the **n** nuclei is random, whenever a Voronoi tessellation 
 ## :one: Voronoi - FPCA (with aligned signals)
 Based on [this](https://www.sciencedirect.com/science/article/pii/S0303243412000505) paper.
 
-![](readme_images/b_step.PNG)
+<p align="center">
+  <img src=readme_images/b_step.PNG>
+</p>
 
-![](readme_images/a_step.PNG)
+<p align="center">
+  <img src=readme_images/a_step.PNG>
+</p>
 
 ## :two: Voronoi - dimesionality reduction algorithm (with original signals)
 Additions with repect to :one::
@@ -92,7 +96,9 @@ Additions with repect to :one::
 2. less robust, hence more specific (with :one: we are saying that, for example, if the representative of 100 signals in a specific patch is clustered as anomaly, all those 100 points will be classifed as anomalies as well);
 3. don't use FPCA and k-means (which might be a bottleneck);
 
-![](readme_images/mdr.PNG)
+<p align="center">
+  <img src=readme_images/mdr.PNG>
+</p>
 
 ## :three: Voronoi - dictionary learning algorithm (with original signals)
 Based on [this](https://ieeexplore.ieee.org/document/7790862) paper. This algorithm has been designed for anomaly detection in *images*, but can be straightforwardly generalized to vectors, thanks to the fact that one step of the algorithm is to unroll some pathces of the image, thus obtaining vectors. **In our case, a vector is not obtained unrolling an image, but it componsed of the values of a signal in different time stamps: i.e. the i-th component of the vector is the evaluation of a specific signal in the i-th time stamp.** 
@@ -101,7 +107,9 @@ The dataset used to train the dictionary needs to be composed of only normal poi
 1. the coeficients which represent its "projection" onto the dictionary are not as sparse as the ones of the training set (which is composed by normal points only);
 2. the dictionary representation of that point using the learned dictionary and weights is far away (in terms of L2 distance) from the true value of the point;
 
-![](readme_images/dl.PNG)
+<p align="center">
+  <img src=readme_images/dl.PNG>
+</p>
 
 ## :four: Voronoi - weighted H<sup>1</sup> distance (with aligned signals)
 The underlying idea for this algorithm was taken from graph teory, in particular regarding the centrality measure.
@@ -111,12 +119,11 @@ $$dist(f_1, f_2) = \|\|f_1 - f_2\|\|^2_{L^2} + \theta \|\|\partial_t f_1 - \part
 
 Note that now the nuclei coincide with the representatives.
 
-![](readme_images/H1.PNG)
+<p align="center">
+  <img src=readme_images/H1.PNG>
+</p>
 
-
-# Numerical reults, advantages and disadvantages:
-
-
+# Conclusions :
 
 
 

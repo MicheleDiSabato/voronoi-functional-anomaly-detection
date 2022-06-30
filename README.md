@@ -9,15 +9,43 @@
 Our project takes into consideration a particular dataset composed of a very large number of spatial points
 belonging to the left atrium (LA) of the heart.
 
-![sample](readme_images/LA.png)
+<p align="center">
+  <img width="460" height="300" src=readme_images/LA.png>
+</p>
 
 The main activity of the heart is the mechanical contraction and expansion, these have their origin in the electrical activation of the cardiac cells. Indeed, at each heartbeat, myocytes are activated and deactivated following a characteristic electrical cycle. If a cell doesn’t work in the right way could cause some cardiac problems, such as arrhythmias.
 
 To check the health of the heart of a patient, many studies have been conducted on the propagation of the impulse of the potential through the heart and the propagation of this signal in space and time is recorded.
 
-![sample](readme_images/sample.png)
+<p align="center">
+  <img width="460" height="300" src=readme_images/sample.png>
+</p>
+
+The previous figure shows a sample of four signals from our dataset, which is composed of more than 140000 functions. It’s clear that some plots seem to be quite different from the rest. The goal of our project is to apply unsupervised clustering algorithms to classify each signal as normal or as anomalous.
+
+Our dataset contains for each point:
+* (x, y, z): spatial coordinates of the location of each point;
+* (UAC1, UAC2) universal atrial components: used for the visualization of the system;
+* 400 values of the electrical potential (400 time steps): value of the electrical potential in one point of the
+heart as a function of time;
+* IIR value: Infinite Impulse Response
 
 # Exploratory data analysis:
+
+In general, we can observe that[^1]:
+* Anomalous signals have both their maximum amplitude and minimum amplitude small (Figure 3). The same holds for the derivative’s amplitude (Figure 4);
+* Normal signals seem to have peaks very close to each other, indeed they are distributed on a linear line (Figure 5);
+* Anomalies have a small variance of the signal (Figure 6);
+* Normal signals tend to have a higher kurtosis and so more prominent peaks with small values around them, instead the abnormal ones tend to have lower kurtosis and so lower peaks (according to small variance) (Figure 7);
+* The skewness suggests that abnormal signals always have a mean amplitude value larger than their median amplitude value, while it’s not true for normal signals (Figure 8). From these plots, we are able to identify the features most related to the anomalous signals, indeed they seem to be closer to flat signals with small amplitude peaks and small variance.
+
+[^1]: by "normal" and "abnormal" we refer to signals having an IIR less or greater than 1.22, respectively.
+
+These considerations were the results of the following exploratory data analysis:
+
+| Amplitude of the absolute values of the curves | Amplitude of the absolute values of the *first derivative* of the curves
+:---:|:----:
+![ampl](readme_images/amplitude.png) | ![ampl_der](readme_images/der.png)
 
 # Assumptions:
 We don't know what makes a point an anomaly, hence we followed two trains of thought:

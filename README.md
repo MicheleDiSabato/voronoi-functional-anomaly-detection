@@ -47,6 +47,14 @@ These considerations were the results of the following exploratory data analysis
 :---:|:----:
 ![ampl](readme_images/amplitude.png) | ![ampl_der](readme_images/der.png)
 
+| Skewness | Kurtosis
+:---:|:----:
+![skew](readme_images/skew.png) | ![kurt](readme_images/kurt.png)
+
+| Displcement among argmax and argmin of the curves | Variance
+:---:|:---:
+![displacement](readme_images/pos.png) | ![var](readme_images/var.png)
+
 # Assumptions:
 We don't know what makes a point an anomaly, hence we followed two trains of thought:
 
